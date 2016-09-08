@@ -1,0 +1,41 @@
+<!-- En frågesida med en fråga överst och tre svarsalternativ som användaren kommer att välja mellan (det räcker med en sida, vi kommer att återanvända denna för varje fråga sen) -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz - Question</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/static/stylesheet.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container" >
+		<div class="row well well-lg">
+			<h1>Fråga 1</h1>
+			<p>Hur ska designen på min sida se ut?</p>
+			<div class="funkyradio">
+				<div class="funkyradio-primary">
+					<input type="radio" name="radio" id="radio1"/>
+					<label for="radio1">Alternativ 1</label>
+				</div>
+			</div>
+			<div class="funkyradio">
+				<div class="funkyradio-primary">
+					<input type="radio" name="radio" id="radio2" />
+					<label for="radio2">Alternativ 2</label>
+				</div>
+			</div>
+			<div class="funkyradio">
+				<div class="funkyradio-primary">
+					<input type="radio" name="radio" id="radio3" />
+					<label for="radio3">Alternativ 3</label>
+				</div>
+			</div>
+			<a href="results.html" type="button" class="btn btn-success" style="float:right">Nästa</a>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="/static/js/bootstrap.min.js"></script>
+</body>
+</html>
