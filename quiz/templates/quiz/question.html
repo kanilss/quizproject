@@ -12,24 +12,24 @@
 <body>
 	<div class="container" >
 		<div class="row well well-lg">
-			<h1>Fråga 1</h1>
-			<p>Hur ska designen på min sida se ut?</p>
+			<h1>Fråga {{question_number}}</h1>
+			<p>{{question}}</p>
 			<div class="funkyradio">
 				<div class="funkyradio-primary">
 					<input type="radio" name="radio" id="radio1"/>
-					<label for="radio1">Alternativ 1</label>
+					<label for="radio1">{{answer1}}</label>
 				</div>
 			</div>
 			<div class="funkyradio">
 				<div class="funkyradio-primary">
 					<input type="radio" name="radio" id="radio2" />
-					<label for="radio2">Alternativ 2</label>
+					<label for="radio2">{{answer2}}</label>
 				</div>
 			</div>
 			<div class="funkyradio">
 				<div class="funkyradio-primary">
 					<input type="radio" name="radio" id="radio3" />
-					<label for="radio3">Alternativ 3</label>
+					<label for="radio3">{{answer3}}</label>
 				</div>
 			</div>
 			<a href="results.html" type="button" class="btn btn-success" style="float:right">Nästa</a>
