@@ -18,9 +18,9 @@
 				Du har kommit till min lista med frågesporter. 
 			</p>
 			<div class="list-group">
-				<a href="quiz.html" class="list-group-item">Frågesport 1</a>
-				<a href="quiz.html" class="list-group-item">Frågesport 2</a>
-				<a href="quiz.html" class="list-group-item">Frågesport 3</a>
+				{% for quiz in quizzes%}
+				<a href="quiz.html" class="list-group-item">{{quiz.name}}</a>
+				{% endfor %}
 			</div>
 		</div>
 		<div>
