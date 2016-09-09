@@ -14,27 +14,27 @@
 		<div class="row well well-lg">
 			<h1>Fråga {{question_number}}</h1>
 			<p>{{question}}</p>
-			<form action="#">
+			<form {%csrf_token%} action="{% url 'anwer_page' quiz.quiz_number question_number %}" method="post">
 				<div class="funkyradio">
 					<div class="funkyradio-primary">
-						<input type="radio" name="radio" id="1"/>
+						<input type="radio" name="answer" id="1"/>
 						<label for="radio1">{{answer1}}</label>
 					</div>
 				</div>
 				<div class="funkyradio">
 					<div class="funkyradio-primary">
-						<input type="radio" name="radio" id="2" />
+						<input type="radio" name="answer" id="2" />
 						<label for="radio2">{{answer2}}</label>
 					</div>
 				</div>
 				<div class="funkyradio">
 					<div class="funkyradio-primary">
-						<input type="radio" name="radio" id="3" />
+						<input type="radio" name="answer" id="3" />
 						<label for="radio3">{{answer3}}</label>
 					</div>
 				</div>
 			</form>
-			<a href="{% url "completed_page" quiz_number %}" type="button" class="btn btn-success btn-pink" style="float:right">Nästa</a>
+			<a href="{% url "completed_page" quiz_number %}" type="submit" class="btn btn-success btn-pink" style="float:right">Nästa</a>
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

@@ -1,22 +1,6 @@
 from django.shortcuts import render
 from quiz.models import Quiz
-
-quizzes = [
-	{
-		"quiz_number": 1,
-		"name": "Klassiska böcker",
-		"description": "Hur bra kan du dina klassiker?"
-	},
-	{
-		"quiz_number": 2,
-		"name": "Största 1slagen",
-		"description": "Kan du dina lag?"
-	},
-	{
-		"quiz_number": 3,
-		"name": "Världens mest kända hackare",
-		"description": "Hackerhistoria är viktigt, kan du den?"	},
-]
+from django.shortcuts import redirect
 
 # Create your views here.
 def startpage(request):
@@ -54,3 +38,12 @@ def completed(request, quiz_number):
 		"quiz_number": quiz_number,
 	}
 	return render(request, "quiz/results.html", context)
+
+def answer(request, quiz_number, question_number):
+	saved_answers = request.session.get(quiz_number, {})
+	answer = int(request.POST["answer"])
+	saved_answers[question_number] = answer
+	request.session[quiz_number] = saved_answers
+
+	question_number = int(question_number)
+	return redirect("question_page", quiz_number, question_number + 1)
