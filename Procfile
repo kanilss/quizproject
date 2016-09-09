@@ -1,1 +1,1 @@
-web: gunicorn quizsite.wsgi:application
+web: gunicorn quizsite.wsgi:application --logfile - 
