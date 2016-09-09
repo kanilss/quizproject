@@ -14,27 +14,29 @@
 		<div class="row well well-lg">
 			<h1>Fråga {{question_number}}</h1>
 			<p>{{question}}</p>
-			<form {%csrf_token%} action="{% url 'anwer_page' quiz.quiz_number question_number %}" method="post">
+			<form action="{% url 'answer_page' quiz.quiz_number question_number %}" method="post">
+			 {%csrf_token%}
 				<div class="funkyradio">
 					<div class="funkyradio-primary">
-						<input type="radio" name="answer" id="1"/>
-						<label for="radio1">{{answer1}}</label>
+						<input type="radio" name="answer" value="1" id="radio1"/>
+						<label for="radio1">{{answer2}}</label>
 					</div>
 				</div>
 				<div class="funkyradio">
 					<div class="funkyradio-primary">
-						<input type="radio" name="answer" id="2" />
+						<input type="radio" name="answer" value="2" id="radio2" />
 						<label for="radio2">{{answer2}}</label>
 					</div>
 				</div>
 				<div class="funkyradio">
 					<div class="funkyradio-primary">
-						<input type="radio" name="answer" id="3" />
+						<input type="radio" name="answer" value="3" id="radio3" />
 						<label for="radio3">{{answer3}}</label>
 					</div>
 				</div>
+			
+			<button type="submit" class="btn btn-success btn-pink" style="float:right">submit</button>
 			</form>
-			<a href="{% url "completed_page" quiz_number %}" type="submit" class="btn btn-success btn-pink" style="float:right">Nästa</a>
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
