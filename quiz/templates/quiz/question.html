@@ -14,25 +14,27 @@
 		<div class="row well well-lg">
 			<h1>Fråga {{question_number}}</h1>
 			<p>{{question}}</p>
-			<div class="funkyradio">
-				<div class="funkyradio-primary">
-					<input type="radio" name="radio" id="radio1"/>
-					<label for="radio1">{{answer1}}</label>
+			<form action="#">
+				<div class="funkyradio">
+					<div class="funkyradio-primary">
+						<input type="radio" name="radio" id="1"/>
+						<label for="radio1">{{answer1}}</label>
+					</div>
 				</div>
-			</div>
-			<div class="funkyradio">
-				<div class="funkyradio-primary">
-					<input type="radio" name="radio" id="radio2" />
-					<label for="radio2">{{answer2}}</label>
+				<div class="funkyradio">
+					<div class="funkyradio-primary">
+						<input type="radio" name="radio" id="2" />
+						<label for="radio2">{{answer2}}</label>
+					</div>
 				</div>
-			</div>
-			<div class="funkyradio">
-				<div class="funkyradio-primary">
-					<input type="radio" name="radio" id="radio3" />
-					<label for="radio3">{{answer3}}</label>
+				<div class="funkyradio">
+					<div class="funkyradio-primary">
+						<input type="radio" name="radio" id="3" />
+						<label for="radio3">{{answer3}}</label>
+					</div>
 				</div>
-			</div>
-			<a href="{% url "completed_page" quiz_number %}" type="button" class="btn btn-success" style="float:right">Nästa</a>
+			</form>
+			<a href="{% url "completed_page" quiz_number %}" type="button" class="btn btn-success btn-pink" style="float:right">Nästa</a>
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
