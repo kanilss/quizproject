@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from quiz.models import Quiz
 
 quizzes = [
 	{
@@ -20,7 +21,7 @@ quizzes = [
 # Create your views here.
 def startpage(request):
 	context = {
-		"quizzes": quizzes,
+		"quizzes": Quiz.objects.all(),
 }
 	return render(request, "quiz/start.html", context)
 
